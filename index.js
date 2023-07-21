@@ -44,6 +44,8 @@ const questions = [
     default: "black",
   },
 ];
+
+// function to writeFile - will create a file if doesn't already exist or will override the existing file.
 function writeToFile(fileName, data) {
   fs.writeFile(fileName, data, (error) => console.error(error));
 }
@@ -95,4 +97,4 @@ function init() {
       console.error(error);
     });
 }
-init();
+init(); // the init function invokes the prompts
